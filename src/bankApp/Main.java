@@ -9,37 +9,37 @@ import Bangking.bangkingClass;
  */
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner inp = new Scanner(System.in);
         int attemp = 3;
         
         System.out.println("HELLO WELCOME TO THE SYSTEM!");
-        System.out.println("What do you feel doing today? ");
+        System.out.println("What do you feel doing today? \n");
         System.out.println("1. Banking");
         System.out.println("2. Doctors Appointment");
         System.out.println("3. Shopping");
         
         System.out.print("Enter choice: ");
-        int choice = sc.nextInt();
+        int choice = inp.nextInt();
         
         switch(choice){
             case 1:
                 while(attemp != 0){
                     bangkingClass bank= new bangkingClass();
                     
-                    System.out.println("Attemp left: "+attemp);
-                    
-                    System.out.println("Enter your Account No: ");
-                    int accountNo = sc.nextInt();
+                    System.out.print("Enter your Account No: ");
+                    int accountNo = inp.nextInt();
 
-                    System.out.println("Enter your Pin: ");
-                    int pin = sc.nextInt();
+                    System.out.print("Enter your Pin: ");
+                    int pin = inp.nextInt();
 
-                        if(bank.verifyAccount(accountNo, pin)){
-                            System.out.println("LOGIN SUCCESS");
-                        }else{
-                            System.out.println("INVALID ACCOUNT!");
-                            attemp --;
-                        }
+                    if(bank.verifyAccount(accountNo, pin)){
+                        System.out.println("LOGIN SUCCESS");
+                        break;
+                    }else{
+                        System.out.println("INVALID ACCOUNT!");
+                        attemp --;
+                         System.out.println("\nAttemp left: "+attemp);
+                    }
                 }
                 
                 break;
