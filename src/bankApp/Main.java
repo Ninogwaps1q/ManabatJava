@@ -33,10 +33,10 @@ public class Main {
                     int pin = inp.nextInt();
 
                     if(bank.verifyAccount(accountNo, pin)){
-                        System.out.println("LOGIN SUCCESS");
+                        System.out.println("\nLOGIN SUCCESS");
                         break;
                     }else{
-                        System.out.println("INVALID ACCOUNT!");
+                        System.out.println("\nINVALID ACCOUNT!");
                         attemp --;
                          System.out.println("\nAttemp left: "+attemp);
                     }
